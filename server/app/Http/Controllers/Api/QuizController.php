@@ -53,7 +53,21 @@ class QuizController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validated = $request->validate([
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
+
+        $quiz = Quiz::find($id);
+
+        if (!$quiz) return response()->json(['message' => 'Quiz not found']);
+
+        $quiz->update($validated);
+
+        return response()->json([
+            'message' => 'Quiz updated successfully',
+            'data' => $quiz
+        ]);
     }
 
     /**
