@@ -56,8 +56,8 @@ class QuizController extends Controller
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([
-            'question' => 'required',
-            'answer' => 'required'
+            'question' => 'sometimes|string',
+            'answer' => 'sometimes|string',
         ]);
 
         $quiz = Quiz::find($id);

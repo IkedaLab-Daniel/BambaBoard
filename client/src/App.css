@@ -1,0 +1,34 @@
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #0b1d26;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: 
+    linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.9)),
+    repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.05) 0,
+        rgba(255,255,255,0.05) 1px,
+        transparent 1px,
+        transparent 100px
+    ),
+    repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.05) 0,
+        rgba(255,255,255,0.05) 1px,
+        transparent 1px,
+        transparent 100px
+    );
+    background-blend-mode: overlay;
+}
