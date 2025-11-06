@@ -1,34 +1,27 @@
 body {
     font-family: "Inter", sans-serif;
-    background-color: #0b1d26;
-    color: #fff;
+    background-color: #cecfbc;
+    color: #1a202c;
     overflow-x: hidden;
 }
 
 .main {
-    position: relative;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 4rem 2rem;
     background: 
-    linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.9)),
+    linear-gradient(180deg, rgba(255,255,255,0.5), rgba(240,240,240,0.3)),
     repeating-linear-gradient(
         0deg,
-        rgba(255,255,255,0.05) 0,
-        rgba(255,255,255,0.05) 1px,
-        transparent 1px,
-        transparent 100px
+        rgba(0,0,0,0.1) 0,
+        rgba(0,0,0,0.08) 3px,
+        transparent 0.5px,
+        transparent 120px
     ),
     repeating-linear-gradient(
         90deg,
-        rgba(255,255,255,0.05) 0,
-        rgba(255,255,255,0.05) 1px,
-        transparent 1px,
-        transparent 100px
+        rgba(0,0,0,0.1) 0,
+        rgba(0,0,0,0.08) 3px,
+        transparent 0.5px,
+        transparent 120px
     );
-    background-blend-mode: overlay;
+    background-blend-mode: normal;
 }
