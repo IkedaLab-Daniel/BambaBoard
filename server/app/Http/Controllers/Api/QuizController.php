@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Quiz;
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\returnSelf;
+
 class QuizController extends Controller
 {
     /**
@@ -75,6 +77,12 @@ class QuizController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $quiz = Quiz::find($id);
+
+        if (!$quiz) return response()->json(['message' => 'Quiz not found']);
+
+        $quiz->delete();
+
+        return response()->json(['message' => 'Quiz deleted']);
     }
 }
