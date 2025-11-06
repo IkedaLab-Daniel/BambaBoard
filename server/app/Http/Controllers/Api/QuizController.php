@@ -22,7 +22,18 @@ class QuizController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'question' => 'required',
+            'answer' => 'required'
+        ]);
+
+        $quiz = Quiz::create($validated);
+
+        return response()->json([
+            'message' => 'Quiz Added!',
+            'data' => $quiz
+        ], 201);
+        
     }
 
     /**
