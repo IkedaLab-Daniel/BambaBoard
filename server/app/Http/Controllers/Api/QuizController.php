@@ -41,7 +41,11 @@ class QuizController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $quiz = Quiz::find($id);
+
+        if (!$quiz) return response()->json(['message' => 'Quiz not found']);
+
+        return response()->json(['data' => $quiz]);
     }
 
     /**
